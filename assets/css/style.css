@@ -1,0 +1,23 @@
+.header {
+    width: 100%;
+}
+
+
+.person {
+    width:50%;
+    float: left;
+}
+.macro {
+    width:50%;
+    float: right;
+}
+
+label {display: block;}
+
+footer {
+    clear:both;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
