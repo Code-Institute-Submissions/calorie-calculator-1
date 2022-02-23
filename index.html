@@ -39,7 +39,7 @@
             </div>    
             <div class="enter-measurements">
                 <label for="bodyfat">Bodyfat percentage (if known)</label>
-                <input name="bodyfat" type="number" required class="person-input">
+                <input name="bodyfat" type="number" value="0" required class="person-input">
             </div>
             <div class="enter-measurements">    
                 <label for="activity">Activity Level</label>
@@ -67,26 +67,36 @@
                 </select>
                 <div id="warning"></div>
                 <h3>Desired Macronutrient composition</h3>
-                <div>
-                    <label for="protein">Protein</label>
-                    <input id="protein" type="number" required class="goal-input">
+                <div class="macro">
+                    <span></span>
+                    <span class="heading">Grams</span>
+                    <span class="heading">Calories</span>
+                </div>
+                <div class="macro">
+                    <span>
+                        <label for="protein">Protein</label>
+                        <input id="protein" type="number" required class="goal-input">
+                    </span>
                     <span id="protein-grams">0</span>
                     <span id="protein-calories">0</span>
                 </div>
-                <div>
-                    <label for="carbohydrate">Carbohydrate</label>
-                    <input id="carbohydrate" type="number" required class="goal-input">
+                <div  class="macro">
+                    <span>
+                        <label for="carbohydrate">Carbohydrate</label>
+                        <input id="carbohydrate" type="number" required class="goal-input">
+                    </span>
                     <span id="carbohydrate-grams">0</span>
                     <span id="carbohydrate-calories">0</span>
                 </div>
-                <div>
-                <label for="fat">Fat</label>
-                    <span id="fat-percent">0</span>
+                <div  class="macro">
+                    <span>
+                        <label for="fat">Fat</label>
+                    </span>
                     <span id="fat-grams">0</span>
                     <span id="fat-calories">0</span>
                 </div>
 
-                <p class="target-cals">Target Calories <span id="target">0</span></p>
+                <div class="target-cals">Target Calories <span id="target">0</span></div>
         </section>
       
     </div>

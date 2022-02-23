@@ -34,13 +34,10 @@ select {
     text-align: center;
 }
 
-/*.enter-measurements input {*/
 input{
     width: 8%;
     border-width: 0 0 1px;
 }
-
-
 
 .enter-measurements select {
     float: right;
@@ -54,6 +51,17 @@ input::-webkit-inner-spin-button {
 label {
     margin: 5%;
 }
+
+.macro span {
+    width: 30%;
+    display: inline-block;
+    margin-top: 6%;
+}
+
+.target-cals {
+    margin-top: 6%;
+}
+
 
 footer {
     clear:both;
