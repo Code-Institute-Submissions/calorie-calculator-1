@@ -10,10 +10,12 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="header">
-        <header><h1>Macro Calculator</h1></header>
+    <div>
+        <header>
+            <h1>Macro Calculator</h1>
+        </header>
     </div>
-    <div class="person">
+    <div class="child">
         <section id="measurements" aria-label="Area to enter measurements">
             <h2>Please enter your:</h2>
                     <div id="enter-measurements">
@@ -41,12 +43,18 @@
                     </div>
                     <div id="enter-measurements">    
                         <label for="activity">Activity Level</label>
-                        <input name="activity" type="number" required class="person-input">
+                        <select name="activity" required class="person-input">
+                            <option value="sedentary">Sedentary (Office Job)</option>
+                            <option value="light" >Light Exercise (1-2 days/week)</option>
+                            <option value="moderate">Moderate Exercise (3-5 days/week)</option>
+                            <option value="heavy">Heavy Exercise (6-7 days/week)</option>
+                            <option value="athlete">Athlete (2x per day)</option>
+                        </select>
                     </div>
                     <p class="current-cals">Calories to maintain weight <span id="tdee"></span></p>
         </section>
       </div>
-      <div class="macros">
+      <div class="child">
         <section id="goals" aria-label="goals">
             <h2>Goals and Target</h2>
                     <label for="aim">Aim</label>
@@ -68,7 +76,8 @@
 
                     <p class="target-cals">Target Calories <span id="target">0</span></p>
         </section>
-      </div>
+      
+    </div>
     <footer>
         <p>Footer text</p>
     </footer>

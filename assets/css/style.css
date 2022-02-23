@@ -9,16 +9,9 @@ body {
     text-align: center;
 }
 
-
-.person {
-    margin-left:5%;
-    width:50%;
-    float: left;
-}
-
-.macro {
-    width:50%;
-    float: right;
+.child {
+    float: left; 
+    width: 50%; 
 }
 
 #enter-measurements {
@@ -29,8 +22,8 @@ body {
 }
 
 #enter-measurements input, select {
-    float:right;
-    border-width: 0 0 1px;
+    /*float:right;*/
+    
     outline: 0;
     border-color: #445361;
     text-align: center;
@@ -38,14 +31,15 @@ body {
 
 #enter-measurements input {
     width: 8%;
-    margin-right: 6%;
-
+    border-width: 0 0 1px;
 }
 
 #enter-measurements select {
-    border-width: 0;
+    float:right;
+    /*border-width: 0;*/
     font-family: "Raleway", sans-serif;
     font-style: italic;
+    border-radius: 25px;
 
 }
 
