@@ -2,17 +2,61 @@
     width: 100%;
 }
 
+body {
+    background-color: white;
+    font-family: "Raleway", sans-serif;
+    color: #445361;
+    text-align: center;
+}
+
 
 .person {
+    margin-left:5%;
     width:50%;
     float: left;
 }
+
 .macro {
     width:50%;
     float: right;
 }
 
-label {display: block;}
+#enter-measurements {
+    margin: 2.5%;
+    width: 60%;
+    display: inline-block;
+    height: 10%;
+}
+
+#enter-measurements input, select {
+    float:right;
+    border-width: 0 0 1px;
+    outline: 0;
+    border-color: #445361;
+    text-align: center;
+}
+
+#enter-measurements input {
+    width: 8%;
+    margin-right: 6%;
+
+}
+
+#enter-measurements select {
+    border-width: 0;
+    font-family: "Raleway", sans-serif;
+    font-style: italic;
+
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+label {
+    margin: 5%;
+}
 
 footer {
     clear:both;
