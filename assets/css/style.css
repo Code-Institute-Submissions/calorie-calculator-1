@@ -14,14 +14,14 @@ body {
     width: 50%; 
 }
 
-#enter-measurements {
+.enter-measurements {
     margin: 2.5%;
     width: 60%;
     display: inline-block;
     height: 10%;
 }
 
-#enter-measurements input, select {
+.enter-measurements input, select {
     /*float:right;*/
     
     outline: 0;
@@ -29,12 +29,12 @@ body {
     text-align: center;
 }
 
-#enter-measurements input {
+.enter-measurements input {
     width: 8%;
     border-width: 0 0 1px;
 }
 
-#enter-measurements select {
+.enter-measurements select {
     float:right;
     /*border-width: 0;*/
     font-family: "Raleway", sans-serif;
