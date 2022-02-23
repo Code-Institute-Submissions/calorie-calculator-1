@@ -52,14 +52,20 @@ label {
     margin: 5%;
 }
 
+#desired {
+    margin-top: 10%;
+    margin-bottom: 1%;
+}
+
 .macro span {
     width: 30%;
     display: inline-block;
-    margin-top: 6%;
+    margin-top: 1%;
 }
 
-.target-cals {
-    margin-top: 6%;
+#current-cals, #target-cals {
+    margin-top: 4%;
+    font-size: 200%;
 }
 
 
