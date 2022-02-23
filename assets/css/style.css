@@ -9,12 +9,19 @@ body {
     text-align: center;
 }
 
+select {
+    font-family: "Raleway", sans-serif;
+    font-style: italic;
+    border-radius: 25px;
+
+}
+
 .child {
     float: left; 
     width: 50%; 
 }
 
-.enter-measurements {
+.enter-measurements{
     margin: 2.5%;
     width: 60%;
     display: inline-block;
@@ -22,8 +29,6 @@ body {
 }
 
 .enter-measurements input, select {
-    /*float:right;*/
-    
     outline: 0;
     border-color: #445361;
     text-align: center;
@@ -34,13 +39,10 @@ body {
     border-width: 0 0 1px;
 }
 
-.enter-measurements select {
-    float:right;
-    /*border-width: 0;*/
-    font-family: "Raleway", sans-serif;
-    font-style: italic;
-    border-radius: 25px;
 
+
+.enter-measurements select {
+    float: right;
 }
 
 input::-webkit-inner-spin-button {

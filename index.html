@@ -57,24 +57,30 @@
       <div class="child">
         <section id="goals" aria-label="goals">
             <h2>Goals and Target</h2>
-                    <label for="aim">Aim</label>
-                    <input id="aim" type="number" required class="goal-input">
-                    <div id="warning"></div>
-                    <h3>Desired Macronutrient composition</h3>
-                    <label for="protein">Protein</label>
-                    <input id="protein" type="number" required class="goal-input">
-                    <span id="protein-grams">0</span>
-                    <span id="protein-calories">0</span>
-                    <label for="carbohydrate">Carbohydrate</label>
-                    <input id="carbohydrate" type="number" required class="goal-input">
-                    <span id="carbohydrate-grams">0</span>
-                    <span id="carbohydrate-calories">0</span>
-                    <label for="fat">Fat</label>
-                    <span id="fat-percent">0</span>
-                    <span id="fat-grams">0</span>
-                    <span id="fat-calories">0</span>
+                <label for="aim">Aim</label>
+                <select name="aim" required class="goal-input">
+                    <option value="aggressive">Aggressive Weight Loss</option>
+                    <option value="moderate" >Moderate Weight Loss</option>
+                    <option value="maintain" selected>Maintain Current Weight</option>
+                    <option value="modest">Modest Weight Gain</option>
+                    <option value="rapid">Rapid Weight Gain</option>
+                </select>
+                <div id="warning"></div>
+                <h3>Desired Macronutrient composition</h3>
+                <label for="protein">Protein</label>
+                <input id="protein" type="number" required class="goal-input">
+                <span id="protein-grams">0</span>
+                <span id="protein-calories">0</span>
+                <label for="carbohydrate">Carbohydrate</label>
+                <input id="carbohydrate" type="number" required class="goal-input">
+                <span id="carbohydrate-grams">0</span>
+                <span id="carbohydrate-calories">0</span>
+                <label for="fat">Fat</label>
+                <span id="fat-percent">0</span>
+                <span id="fat-grams">0</span>
+                <span id="fat-calories">0</span>
 
-                    <p class="target-cals">Target Calories <span id="target">0</span></p>
+                <p class="target-cals">Target Calories <span id="target">0</span></p>
         </section>
       
     </div>
