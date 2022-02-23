@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Macro Calculator</title>
 </head>
 <body>
     <div>
@@ -67,18 +67,24 @@
                 </select>
                 <div id="warning"></div>
                 <h3>Desired Macronutrient composition</h3>
-                <label for="protein">Protein</label>
-                <input id="protein" type="number" required class="goal-input">
-                <span id="protein-grams">0</span>
-                <span id="protein-calories">0</span>
-                <label for="carbohydrate">Carbohydrate</label>
-                <input id="carbohydrate" type="number" required class="goal-input">
-                <span id="carbohydrate-grams">0</span>
-                <span id="carbohydrate-calories">0</span>
+                <div>
+                    <label for="protein">Protein</label>
+                    <input id="protein" type="number" required class="goal-input">
+                    <span id="protein-grams">0</span>
+                    <span id="protein-calories">0</span>
+                </div>
+                <div>
+                    <label for="carbohydrate">Carbohydrate</label>
+                    <input id="carbohydrate" type="number" required class="goal-input">
+                    <span id="carbohydrate-grams">0</span>
+                    <span id="carbohydrate-calories">0</span>
+                </div>
+                <div>
                 <label for="fat">Fat</label>
-                <span id="fat-percent">0</span>
-                <span id="fat-grams">0</span>
-                <span id="fat-calories">0</span>
+                    <span id="fat-percent">0</span>
+                    <span id="fat-grams">0</span>
+                    <span id="fat-calories">0</span>
+                </div>
 
                 <p class="target-cals">Target Calories <span id="target">0</span></p>
         </section>
