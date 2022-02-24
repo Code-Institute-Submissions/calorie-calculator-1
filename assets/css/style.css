@@ -2,11 +2,15 @@
     width: 100%;
 }
 
+h1, h2, h3 {
+    text-align: center;
+}
+
 body {
     background-color: white;
     font-family: "Raleway", sans-serif;
     color: #445361;
-    text-align: center;
+    text-align: left;
 }
 
 select {
@@ -18,12 +22,14 @@ select {
 
 .child {
     float: left; 
-    width: 50%; 
+    width: 42%; 
+    margin-left: 4%;
+    margin-right: 4%;
 }
 
 .goals-and-measurements {
     margin: 2%;
-    width: 60%;
+    width: 90%;
     display: inline-block;
     height: 8%;
 }
@@ -32,6 +38,7 @@ select {
     outline: 0;
     border-color: #445361;
     text-align: center;
+    float: right;
 }
 
 input{
@@ -42,6 +49,7 @@ input{
 button {
     border-radius:25px;
     margin: auto;
+    float: center;
     text-align:center;
     font-size:100%;
     background-color: #3a3a3a;
@@ -55,7 +63,7 @@ button:hover {
 }
 
 .goals-and-measurements select {
-    float: right;
+    float: center;
 }
 
 input::-webkit-inner-spin-button {
@@ -64,7 +72,7 @@ input::-webkit-inner-spin-button {
 }
 
 label {
-    margin: 5%;
+    margin: 2%;
 }
 
 #desired {
@@ -74,6 +82,7 @@ label {
 .macro span {
     width: 30%;
     display: inline-block;
+    text-align: center;
     margin-top: 1%;
 }
 
@@ -83,7 +92,7 @@ label {
     color: goldenrod;
 }
 
-.target-calories {
+.calories {
     margin-top: 5.5%;
 }
 

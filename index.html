@@ -42,16 +42,16 @@
                 <input name="bodyfat" type="number" value="0" max="100" required>
             </div>
             <div class="goals-and-measurements">    
-                <label for="activity">Activity Level</label>
+                <label for="activity">Activity level</label>
                 <select name="activity" required>
-                    <option value="sedentary">Sedentary (Office Job)</option>
+                    <option value="sedentary">Sedentary</option>
                     <option value="light" >Light Exercise (1-2 days/week)</option>
                     <option value="moderate">Moderate Exercise (3-5 days/week)</option>
                     <option value="heavy">Heavy Exercise (6-7 days/week)</option>
                     <option value="athlete">Athlete (2x per day)</option>
                 </select>
             </div>
-            <div class="goals-and-measurements">    
+            <div class="calories">    
                 <button>Calulate Current Maintenance Calories</button>    
             </div>
             <p id="current-cals"><span id="tdee"></span></p>
@@ -70,42 +70,41 @@
                     <option value="rapid">Rapid Weight Gain</option>
                 </select>
             </div>
-                <div id="warning"></div>
-                <h3 id="desired">Desired Macronutrient composition</h3>
-                <div class="macro">
-                    <span>%age</span>
-                    <span class="heading">Grams</span>
-                    <span class="heading">Calories</span>
-                </div>
-                <div class="macro">
-                    <span>
-                        <label for="protein">Protein</label>
-                        <input id="protein" type="number" required>
-                    </span>
-                    <span id="protein-grams">0</span>
-                    <span id="protein-calories">0</span>
-                </div>
-                <div  class="macro">
-                    <span>
-                        <label for="carbohydrate">Carbohydrate</label>
-                        <input id="carbohydrate" type="number" required>
-                    </span>
-                    <span id="carbohydrate-grams">0</span>
-                    <span id="carbohydrate-calories">0</span>
-                </div>
-                <div  class="macro">
-                    <span>
-                        <label for="fat">Fat</label>
-                    </span>
-                    <span id="fat-grams">0</span>
-                    <span id="fat-calories">0</span>
-                </div>
-                <div class="target-calories">    
-                    <button>Calulate Target Calories</button>    
-                </div>
-                <div id="target-cals"><span id="target"></span></div>
-        </section>
-      
+            <div class="calories">    
+                <button>Calulate Target Calories</button>    
+            </div>
+            <div id="target-cals"><span id="target"></span></div>
+            <div id="warning"></div>
+            <h3 id="desired">Desired Macronutrient composition</h3>
+            <div class="macro">
+                <span>%age</span>
+                <span class="heading">Grams</span>
+                <span class="heading">Calories</span>
+            </div>
+            <div class="macro">
+                <span>
+                    <label for="protein">Protein</label>
+                    <input id="protein" type="number" value="30"required>
+                </span>
+                <span id="protein-grams">0</span>
+                <span id="protein-calories">0</span>
+            </div>
+            <div  class="macro">
+                <span>
+                    <label for="carbohydrate">Carbohydrate</label>
+                    <input id="carbohydrate" type="number" value="40" required>
+                </span>
+               <span id="carbohydrate-grams">0</span>
+                <span id="carbohydrate-calories">0</span>
+            </div>
+            <div  class="macro">
+                <span>
+                    <label for="fat">Fat</label>
+                </span>
+                <span id="fat-grams">0</span>
+                <span id="fat-calories">0</span>
+            </div>
+        </section>      
     </div>
     <footer>
         <p>Footer text</p>
