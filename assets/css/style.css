@@ -68,8 +68,7 @@ label {
 }
 
 #desired {
-    margin-top: 5%;
-    margin-bottom: 1%;
+    margin-top: 10%;
 }
 
 .macro span {
@@ -82,6 +81,10 @@ label {
     margin-top: 4%;
     font-size: 150%;
     color: goldenrod;
+}
+
+.target-calories {
+    margin-top: 5.5%;
 }
 
 
