@@ -21,14 +21,14 @@ select {
     width: 50%; 
 }
 
-.enter-measurements {
+.goals-and-measurements {
     margin: 2%;
     width: 60%;
     display: inline-block;
     height: 8%;
 }
 
-.enter-measurements input, .macro input, select {
+.goals-and-measurements input, .macro input, select {
     outline: 0;
     border-color: #445361;
     text-align: center;
@@ -54,7 +54,7 @@ button:hover {
     background-color:#C0C0C0;
 }
 
-.enter-measurements select {
+.goals-and-measurements select {
     float: right;
 }
 

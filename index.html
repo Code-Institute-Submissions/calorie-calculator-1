@@ -18,30 +18,30 @@
     <div class="child">
         <section id="measurements" aria-label="Area to enter measurements">
             <h2>Enter Your Details</h2>
-            <div class="enter-measurements">
+            <div class="goals-and-measurements">
                 <label for="weight">Weight in kilograms</label>
                 <input name="weight" type="number" required>
             </div>
-            <div class="enter-measurements">
+            <div class="goals-and-measurements">
                 <label for="height">Height in centimetres</label>
                 <input name="height" type="number" required>
             </div>
-            <div class="enter-measurements">
+            <div class="goals-and-measurements">
                 <label for="age">Age</label>
                 <input name="age" name = "age" type="number" required>
             </div>
-            <div class="enter-measurements">
+            <div class="goals-and-measurements">
                 <label for="sex">Sex</label>
                 <select name="sex" required>
                     <option value="female">Female</option>
                     <option value="male" >Male</option>
                 </select>
             </div>    
-            <div class="enter-measurements">
+            <div class="goals-and-measurements">
                 <label for="bodyfat">Bodyfat percentage (if known)</label>
                 <input name="bodyfat" type="number" value="0" max="100" required>
             </div>
-            <div class="enter-measurements">    
+            <div class="goals-and-measurements">    
                 <label for="activity">Activity Level</label>
                 <select name="activity" required>
                     <option value="sedentary">Sedentary (Office Job)</option>
@@ -51,7 +51,7 @@
                     <option value="athlete">Athlete (2x per day)</option>
                 </select>
             </div>
-            <div class="enter-measurements">    
+            <div class="goals-and-measurements">    
                 <button>Calulate Current Maintenance Calories</button>    
             </div>
             <p id="current-cals"><span id="tdee"></span></p>
@@ -60,7 +60,7 @@
       <div class="child">
         <section id="goals" aria-label="goals">
             <h2>Goals and Target</h2>
-            <div class="goal-input">
+            <div class="goals-and-measurements">
                 <label for="aim">Aim</label>
                 <select name="aim" required >
                     <option value="aggressive">Aggressive Weight Loss</option>
@@ -80,7 +80,7 @@
                 <div class="macro">
                     <span>
                         <label for="protein">Protein</label>
-                        <input id="protein" type="number" required class="goal-input">
+                        <input id="protein" type="number" required>
                     </span>
                     <span id="protein-grams">0</span>
                     <span id="protein-calories">0</span>
@@ -88,7 +88,7 @@
                 <div  class="macro">
                     <span>
                         <label for="carbohydrate">Carbohydrate</label>
-                        <input id="carbohydrate" type="number" required class="goal-input">
+                        <input id="carbohydrate" type="number" required>
                     </span>
                     <span id="carbohydrate-grams">0</span>
                     <span id="carbohydrate-calories">0</span>
@@ -100,7 +100,7 @@
                     <span id="fat-grams">0</span>
                     <span id="fat-calories">0</span>
                 </div>
-                <div class="goal-input">    
+                <div>    
                     <button>Calulate Target Calories</button>    
                 </div>
                 <div id="target-cals"><span id="target"></span></div>
