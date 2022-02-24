@@ -21,14 +21,14 @@ select {
     width: 50%; 
 }
 
-.enter-measurements{
-    margin: 2.5%;
+.enter-measurements {
+    margin: 2%;
     width: 60%;
     display: inline-block;
-    height: 10%;
+    height: 8%;
 }
 
-.enter-measurements input, select {
+.enter-measurements input, .macro input, select {
     outline: 0;
     border-color: #445361;
     text-align: center;
@@ -37,6 +37,21 @@ select {
 input{
     width: 8%;
     border-width: 0 0 1px;
+}
+
+button {
+    border-radius:25px;
+    margin: auto;
+    text-align:center;
+    font-size:100%;
+    background-color: #3a3a3a;
+    color: white;
+    display:block;
+}
+
+button:hover {
+    color: #3a3a3a;
+    background-color:#C0C0C0;
 }
 
 .enter-measurements select {
@@ -53,7 +68,7 @@ label {
 }
 
 #desired {
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: 1%;
 }
 
@@ -65,7 +80,8 @@ label {
 
 #current-cals, #target-cals {
     margin-top: 4%;
-    font-size: 200%;
+    font-size: 150%;
+    color: goldenrod;
 }
 
 

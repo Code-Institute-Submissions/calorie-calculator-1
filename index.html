@@ -17,33 +17,33 @@
     </div>
     <div class="child">
         <section id="measurements" aria-label="Area to enter measurements">
-            <h2>Please enter your:</h2>
+            <h2>Enter Your Details</h2>
             <div class="enter-measurements">
                 <label for="weight">Weight in kilograms</label>
-                <input name="weight" type="number" required class="person-input">
+                <input name="weight" type="number" required>
             </div>
             <div class="enter-measurements">
                 <label for="height">Height in centimetres</label>
-                <input name="height" type="number" required class="person-input">
+                <input name="height" type="number" required>
             </div>
             <div class="enter-measurements">
                 <label for="age">Age</label>
-                <input name="age" name = "age" type="number" required class="person-input">
+                <input name="age" name = "age" type="number" required>
             </div>
             <div class="enter-measurements">
                 <label for="sex">Sex</label>
-                <select name="sex" required class="person-input">
+                <select name="sex" required>
                     <option value="female">Female</option>
                     <option value="male" >Male</option>
                 </select>
             </div>    
             <div class="enter-measurements">
                 <label for="bodyfat">Bodyfat percentage (if known)</label>
-                <input name="bodyfat" type="number" value="0" required class="person-input">
+                <input name="bodyfat" type="number" value="0" max="100" required>
             </div>
             <div class="enter-measurements">    
                 <label for="activity">Activity Level</label>
-                <select name="activity" required class="person-input">
+                <select name="activity" required>
                     <option value="sedentary">Sedentary (Office Job)</option>
                     <option value="light" >Light Exercise (1-2 days/week)</option>
                     <option value="moderate">Moderate Exercise (3-5 days/week)</option>
@@ -51,24 +51,29 @@
                     <option value="athlete">Athlete (2x per day)</option>
                 </select>
             </div>
-            <p id="current-cals">Calories to maintain weight <span id="tdee"></span></p>
+            <div class="enter-measurements">    
+                <button>Calulate Current Maintenance Calories</button>    
+            </div>
+            <p id="current-cals"><span id="tdee"></span></p>
         </section>
       </div>
       <div class="child">
         <section id="goals" aria-label="goals">
             <h2>Goals and Target</h2>
+            <div class="goal-input">
                 <label for="aim">Aim</label>
-                <select name="aim" required class="goal-input">
+                <select name="aim" required >
                     <option value="aggressive">Aggressive Weight Loss</option>
                     <option value="moderate" >Moderate Weight Loss</option>
                     <option value="maintain" selected>Maintain Current Weight</option>
                     <option value="modest">Modest Weight Gain</option>
                     <option value="rapid">Rapid Weight Gain</option>
                 </select>
+            </div>
                 <div id="warning"></div>
                 <h3 id="desired">Desired Macronutrient composition</h3>
                 <div class="macro">
-                    <span></span>
+                    <span>%age</span>
                     <span class="heading">Grams</span>
                     <span class="heading">Calories</span>
                 </div>
@@ -95,8 +100,10 @@
                     <span id="fat-grams">0</span>
                     <span id="fat-calories">0</span>
                 </div>
-
-                <div id="target-cals">Target Calories <span id="target">0</span></div>
+                <div class="goal-input">    
+                    <button>Calulate Target Calories</button>    
+                </div>
+                <div id="target-cals"><span id="target"></span></div>
         </section>
       
     </div>
