@@ -2,7 +2,7 @@
     width: 100%;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     text-align: center;
 }
 
@@ -34,7 +34,7 @@ select {
     height: 8%;
 }
 
-.goals-and-measurements input, .macro input, select {
+input, select {
     outline: 0;
     border-color: #445361;
     text-align: center;
@@ -42,7 +42,7 @@ select {
 }
 
 input{
-    width: 8%;
+    width: 10%;
     border-width: 0 0 1px;
 }
 
@@ -80,7 +80,7 @@ label {
 }
 
 .macro span {
-    width: 30%;
+    width: 32%;
     display: inline-block;
     text-align: center;
     margin-top: 1%;
@@ -103,4 +103,6 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+    text-align: center;
+    font-weight: 600;
 }
