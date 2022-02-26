@@ -11,6 +11,7 @@ body {
     font-family: "Raleway", sans-serif;
     color: #445361;
     text-align: left;
+
 }
 
 select {
@@ -102,18 +103,53 @@ label {
 footer {
     clear:both;
     position: fixed;
+    padding-top: 1%;
     left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
     font-weight: 600;
+    color: white;
+    background-color: #445361;
 }
 
-/* for screens size from 1080px wide and down (tried to size for down to 800)*/
+/* for screens size from 1080px wide and down */
 @media screen and (max-width: 1080px) {
     
     .macro span, input {
         font-size: 75%;
+    }
+
+}
+
+/* for screens size from 950px wide and down */
+@media screen and (max-width: 950px) {
+
+    .child {
+        clear: both;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 1%;
+        width: 80%;
+    
+    }
+
+    footer {
+        clear: top;
+        position: relative;
+    }
+    
+}
+
+/* for screens size from 460px wide and down */
+@media screen and (max-width: 460px) {
+    
+    .macro span {
+        width: 30%;
+    }
+
+    .macro span, input {
+        font-size: 65%;
     }
 
 }
