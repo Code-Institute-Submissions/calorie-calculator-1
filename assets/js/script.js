@@ -20,12 +20,22 @@ function calculateMaintenance(){
     if (necessary){
         bodyfat = document.getElementById("bodyfat"); 
         if (bodyfat > 0){
-            katchMcCardle();
+            //katchMcCardle();
+            console.log("Katch");
         } else {
-            harrisBenedict();
+            //harrisBenedict();
+            console.log("Harris");
         }
+        tdee.innerText = "2,000";
+        tdee.style.color = " #daa520"
     } else {
-        tdee.innerText = "Specify correct weight, height, and age";
+        tdee.innerText = "Please specify correct weight, height, and age";
+        tdee.style.color = "#FF0000";
+        document.getElementById("weight").value = 0;
+        document.getElementById("height").value = 0;
+        document.getElementById("age").value = 0;
+        document.getElementById("bodyfat").value = 0;
+        document.getElementById("weight").focus();
     }
 }
 
@@ -35,26 +45,21 @@ function calculateTarget(){
 }
 
 function checkMeasurements(){
-    let weight = document.getElementById("weight");
-    let height = document.getElementById("height");
-    let age = document.getElementById("age");
+    let weight = document.getElementById("weight").value;
+    let height = document.getElementById("height").value;
+    let age = document.getElementById("age").value;
     if (weight > 300 || weight < 20 ) {
         alert("Weight must be between 20 and 300 kilograms");
-        weight = 0;******
-        document.getElementById("weight").focus();
         return false;
     }
     if (height > 250 || height < 90 ) {
         alert("Height must be between 90 and 250 centimetres");
-        height.focus();
         return false;
     }
     if (age > 120 || age < 18 ) {
         alert("Age must be between 18 and 120 years");
-        age.focus();
         return false;
     }
     return true;
-
 }
 
