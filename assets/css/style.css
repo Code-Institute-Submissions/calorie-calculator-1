@@ -102,6 +102,7 @@ label {
 
 footer {
     clear:both;
+    font-size: 60%;
     position: fixed;
     padding-top: 1%;
     left: 0;
@@ -110,7 +111,7 @@ footer {
     text-align: center;
     font-weight: 600;
     color: white;
-    background-color: #445361;
+    background-color: gray;
 }
 
 /* for screens size from 1080px wide and down */

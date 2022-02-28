@@ -24,15 +24,15 @@
             <h2>Enter Your Details</h2>
             <div class="goals-and-measurements">
                 <label for="weight">Weight in kilograms </i> </label>
-                <input name="weight" type="number" required>
+                <input name="weight" type="number" max = "300" required>
             </div>
             <div class="goals-and-measurements">
                 <label for="height">Height in centimetres</label>
-                <input name="height" type="number" required>
+                <input name="height" type="number" max="250" required>
             </div>
             <div class="goals-and-measurements">
                 <label for="age">Age</label>
-                <input name="age" name = "age" type="number" required>
+                <input name="age" name = "age" type="number" max = "120" required>
             </div>
             <div class="goals-and-measurements">
                 <label for="sex">Sex</label>
@@ -43,7 +43,7 @@
             </div>    
             <div class="goals-and-measurements">
                 <label for="bodyfat">Bodyfat percentage (if known)</label>
-                <input name="bodyfat" type="number" value="0" max="100" required>
+                <input name="bodyfat" type="number" value="0" max="75" required>
             </div>
             <div class="goals-and-measurements">    
                 <label for="activity">Activity level</label>
@@ -56,9 +56,9 @@
                 </select>
             </div>
             <div class="calories">    
-                <button>Calulate Current Maintenance Calories</button>    
+                <button id="maintenance">Calulate Current Maintenance Calories</button>    
             </div>
-            <p id="current-cals"><span id="tdee"></span></p>
+            <p id="current-cals">Maintenance calories are: <span id="tdee">TBD</span></p>
         </section>
       </div>
       <div class="child">
@@ -75,9 +75,9 @@
                 </select>
             </div>
             <div class="calories">    
-                <button>Calulate Target Calories</button>    
+                <button id="calculate">Calulate Target Calories</button>    
             </div>
-            <div id="target-cals"><span id="target"></span></div>
+            <p id="target-cals">Target calories are: <span id="target">TBD</span></p>
             <div id="warning"></div>
             <h3 id="desired">Desired Macronutrient composition</h3>
             <div class="macro">
@@ -88,7 +88,7 @@
             <div class="macro">
                 <span>
                     <label for="protein">Protein</label>
-                    <input id="protein" type="number" value="30"required>
+                    <input id="protein" type="number" value="30" max="90" required>
                 </span>
                 <span id="protein-grams">0</span>
                 <span id="protein-calories">0</span>
@@ -96,7 +96,7 @@
             <div  class="macro">
                 <span>
                     <label for="carbohydrate">Carbohydrate</label>
-                    <input id="carbohydrate" type="number" value="40" required>
+                    <input id="carbohydrate" type="number" value="40" max="90" required>
                 </span>
                <span id="carbohydrate-grams">0</span>
                 <span id="carbohydrate-calories">0</span>
