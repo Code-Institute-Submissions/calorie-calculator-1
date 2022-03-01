@@ -36,6 +36,7 @@ function calculateTarget(){
         let tdee = document.getElementById("tdee").innerText;
         let target = document.getElementById("target");
         let warning = document.getElementById("warning");
+        warning.innerText = "";
         console.log("TDEE: " + tdee);
         if (tdee !== "TBD"){
             aim = document.getElementById("aim").value;
@@ -43,7 +44,7 @@ function calculateTarget(){
             switch(aim){
                 case "aggressive":
                     target.innerText = Math.round(tdee * 0.8);
-                    warning.innerText("Aggressive weight loss targets should not be pursued for a long period.");
+                    warning.innerText = "Aggressive weight loss targets should not be pursued for a long period.";
                     warning.style.color = "#FF0000";
                     break;
                 case "moderate":
@@ -57,13 +58,13 @@ function calculateTarget(){
                     break;
                 case "rapid":
                     target.innerText = Math.round(tdee * 1.2);
-                    warning.innerText("Aggressive weight gain targets should not be pursued for a long period.");
+                    warning.innerText ="Aggressive weight gain targets should not be pursued for a long period.";
                     warning.style.color = "#FF0000";
                     break;
                 default:
                     bmr = 0;
                     break;            
-            }
+            } 
             target.style.color = " #daa520";
         } else {
             target.innerText = "You need to calculate Current Maintenance Calories first.";
