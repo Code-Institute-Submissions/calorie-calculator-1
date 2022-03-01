@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function(){
     let maintenance = document.getElementById("maintenance");
-    let calculate = document.getElementById("calculate");
+    let aim = document.getElementById("aim");
 
     maintenance.addEventListener("click", function(){
         calculateMaintenance();
     }
     )
 
-    calculate.addEventListener("click", function(){
-            calculateTarget();
+    aim.addEventListener("change", function(){
+        calculateTarget();
     }
     )
 }
@@ -26,7 +26,8 @@ function calculateMaintenance(){
             harrisBenedict();
             console.log("Harris");
         } 
-    } 
+    }
+    calculateTarget(); 
 }
 
 function calculateTarget(){
@@ -34,11 +35,16 @@ function calculateTarget(){
     if (necessary){
         let tdee = document.getElementById("tdee").innerText;
         let target = document.getElementById("target");
+        let warning = document.getElementById("warning");
         console.log("TDEE: " + tdee);
         if (tdee !== "TBD"){
+            aim = document.getElementById("aim").value;
+            console.log("aim: " + aim);
             switch(aim){
                 case "aggressive":
                     target.innerText = Math.round(tdee * 0.8);
+                    warning.innerText("Aggressive weight loss targets should not be pursued for a long period.");
+                    warning.style.color = "#FF0000";
                     break;
                 case "moderate":
                     target.innerText = Math.round(tdee * 0.9);
@@ -51,6 +57,8 @@ function calculateTarget(){
                     break;
                 case "rapid":
                     target.innerText = Math.round(tdee * 1.2);
+                    warning.innerText("Aggressive weight gain targets should not be pursued for a long period.");
+                    warning.style.color = "#FF0000";
                     break;
                 default:
                     bmr = 0;
@@ -69,25 +77,34 @@ function checkMeasurements(){
     let weight = document.getElementById("weight").value;
     let height = document.getElementById("height").value;
     let age = document.getElementById("age").value;
+    let bodyfat = parseInt(document.getElementById("bodyfat").value);
     if (weight > 300 || weight < 20 ) {
         alert("Weight must be between 20 and 300 kilograms");
-        tdee.innerText = "Please specify correct weight.";
-        tdee.style.color = "#FF0000";
+        //tdee.innerText = "Please specify correct weight.";
+        //tdee.style.color = "#FF0000";
         document.getElementById("weight").focus();
         return false;
     }
     if (height > 250 || height < 90 ) {
         alert("Height must be between 90 and 250 centimetres");
-        tdee.innerText = "Please specify correct height.";
-        tdee.style.color = "#FF0000";
+        //tdee.innerText = "Please specify correct height.";
+        //tdee.style.color = "#FF0000";
         document.getElementById("height").focus();
         return false;
     }
     if (age > 120 || age < 18 ) {
         alert("Age must be between 18 and 120 years");
-        tdee.innerText = "Please specify correct age.";
-        tdee.style.color = "#FF0000";
+        //tdee.innerText = "Please specify correct age.";
+        //tdee.style.color = "#FF0000";
         document.getElementById("age").focus();
+        return false;
+    }
+    if ( (bodyfat !== 0) && (bodyfat > 75 || bodyfat < 5 ) ) {
+        console.log("Bodyfat is " + bodyfat);
+        alert("Either leave bodyfat as zero or specify a value between 5% and 75%.");
+        //tdee.innerText = "Please leave bodyfat as zero or specify a value between 5% and 75%.";
+        //tdee.style.color = "#FF0000";
+        document.getElementById("bodyfat").focus();
         return false;
     }
     return true;
