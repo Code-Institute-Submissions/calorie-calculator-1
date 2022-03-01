@@ -14,6 +14,23 @@ document.addEventListener("DOMContentLoaded", function(){
         calculateTarget();
     }
     )
+
+    protein.addEventListener("change", function(){
+        calculateMacros();
+    }
+    )
+
+    carbohydrate.addEventListener("change", function(){
+        calculateMacros();
+    }
+    )
+
+    fat.addEventListener("change", function(){
+        calculateMacros();
+    }
+    )
+
+
 }
 )
 
@@ -77,6 +94,13 @@ function calculateTarget(){
     } 
     
 }
+
+function calculateMacros(){
+    validateMacros();
+
+    calculateGramsAndCals();
+}
+
 
 function checkMeasurements(){
     let weight = document.getElementById("weight").value;
@@ -174,6 +198,5 @@ function calculateGramsAndCals(){
     let carbohydrate_calories = Math.round((target * carbohydrate) / 100);
     document.getElementById("carbohydrate-calories").innerText = carbohydrate_calories;
     document.getElementById("carbohydrate-grams").innerText = Math.round(carbohydrate_calories / 4);
-
 
 }
