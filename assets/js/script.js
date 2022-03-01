@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function(){
     let maintenance = document.getElementById("maintenance");
     let aim = document.getElementById("aim");
+    let protein = document.getElementById("protein");
+    let carbohydrate = document.getElementById("carbohydrate");
+    let fat = document.getElementById("fat");
 
     maintenance.addEventListener("click", function(){
         calculateMaintenance();
@@ -66,6 +69,7 @@ function calculateTarget(){
                     break;            
             } 
             target.style.color = " #daa520";
+            calculateGramsAndCals();
         } else {
             target.innerText = "You need to calculate Current Maintenance Calories first.";
             target.style.color = "#FF0000";
@@ -81,30 +85,22 @@ function checkMeasurements(){
     let bodyfat = parseInt(document.getElementById("bodyfat").value);
     if (weight > 300 || weight < 20 ) {
         alert("Weight must be between 20 and 300 kilograms");
-        //tdee.innerText = "Please specify correct weight.";
-        //tdee.style.color = "#FF0000";
         document.getElementById("weight").focus();
         return false;
     }
     if (height > 250 || height < 90 ) {
         alert("Height must be between 90 and 250 centimetres");
-        //tdee.innerText = "Please specify correct height.";
-        //tdee.style.color = "#FF0000";
         document.getElementById("height").focus();
         return false;
     }
     if (age > 120 || age < 18 ) {
         alert("Age must be between 18 and 120 years");
-        //tdee.innerText = "Please specify correct age.";
-        //tdee.style.color = "#FF0000";
         document.getElementById("age").focus();
         return false;
     }
     if ( (bodyfat !== 0) && (bodyfat > 75 || bodyfat < 5 ) ) {
         console.log("Bodyfat is " + bodyfat);
         alert("Either leave bodyfat as zero or specify a value between 5% and 75%.");
-        //tdee.innerText = "Please leave bodyfat as zero or specify a value between 5% and 75%.";
-        //tdee.style.color = "#FF0000";
         document.getElementById("bodyfat").focus();
         return false;
     }
@@ -158,4 +154,26 @@ function maintenanceMultiplier(bmr){
     }
     tdee.innerText = Math.round(bmr);
     tdee.style.color = " #daa520";
+}
+
+function calculateGramsAndCals(){
+    let target = document.getElementById("target").innerText;
+    let protein = document.getElementById("protein").value;
+    let carbohydrate = document.getElementById("carbohydrate").value;
+    let fat = document.getElementById("fat").value;
+    Math.round(protein);
+    Math.round(carbohydrate);
+    Math.round(fat);
+
+    console.log("Target is " + target + " and protein is " + protein);
+
+    let protein_calories = Math.round((target * protein) / 100);
+    document.getElementById("protein-calories").innerText = protein_calories;
+    document.getElementById("protein-grams").innerText = Math.round(protein_calories / 4);
+
+    let carbohydrate_calories = Math.round((target * carbohydrate) / 100);
+    document.getElementById("carbohydrate-calories").innerText = carbohydrate_calories;
+    document.getElementById("carbohydrate-grams").innerText = Math.round(carbohydrate_calories / 4);
+
+
 }
