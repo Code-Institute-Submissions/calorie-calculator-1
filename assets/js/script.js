@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(){
+    console.log("Before assignments");
     let maintenance = document.getElementById("maintenance");
     let aim = document.getElementById("aim");
-    let protein = document.getElementById("protein");
-    let carbohydrate = document.getElementById("carbohydrate");
-    let fat = document.getElementById("fat");
+    let macros = document.getElementsByClassName("macroNutrient");
 
     maintenance.addEventListener("click", function(){
         calculateMaintenance();
@@ -15,26 +14,17 @@ document.addEventListener("DOMContentLoaded", function(){
     }
     )
 
-    protein.addEventListener("change", function(){
-        calculateMacros();
+    for (let macro of macros){
+        macro.addEventListener("click", function(){
+            console.log("Changed on " + this.id);
+            calculateMacros(this.id);
+        })
     }
-    )
-
-    carbohydrate.addEventListener("change", function(){
-        calculateMacros();
-    }
-    )
-
-    fat.addEventListener("change", function(){
-        calculateMacros();
-    }
-    )
-
-
 }
 )
 
 function calculateMaintenance(){
+    console.log("Calculate Maintenance");
     let necessary = checkMeasurements();
     if (necessary){
         bodyfat = document.getElementById("bodyfat").value; 
@@ -95,8 +85,9 @@ function calculateTarget(){
     
 }
 
-function calculateMacros(){
-    validateMacros();
+function calculateMacros(macro){
+    console.log("MAcro passed is " + macro);
+    validateMacros(macro);
 
     calculateGramsAndCals();
 }
@@ -191,12 +182,67 @@ function calculateGramsAndCals(){
 
     console.log("Target is " + target + " and protein is " + protein);
 
-    let protein_calories = Math.round((target * protein) / 100);
-    document.getElementById("protein-calories").innerText = protein_calories;
-    document.getElementById("protein-grams").innerText = Math.round(protein_calories / 4);
+    let proteinCalories = Math.round((target * protein) / 100);
+    document.getElementById("proteinCalories").innerText = proteinCalories;
+    document.getElementById("proteinGrams").innerText = Math.round(proteinCalories / 4);
 
-    let carbohydrate_calories = Math.round((target * carbohydrate) / 100);
-    document.getElementById("carbohydrate-calories").innerText = carbohydrate_calories;
-    document.getElementById("carbohydrate-grams").innerText = Math.round(carbohydrate_calories / 4);
+    let carbohydrateCalories = Math.round((target * carbohydrate) / 100);
+    document.getElementById("carbohydrateCalories").innerText = carbohydrateCalories;
+    document.getElementById("carbohydrateGrams").innerText = Math.round(carbohydrateCalories / 4);
+
+    let fatCalories = Math.round((target * fat) / 100);
+    document.getElementById("fatCalories").innerText = fatCalories;
+    document.getElementById("fatGrams").innerText = Math.round(fatCalories / 9);
+
+}
+
+function validateMacros(macro){
+    let protein = parseInt(document.getElementById("protein").value);
+    let carbohydrate = parseInt(document.getElementById("carbohydrate").value);
+    let fat = parseInt(document.getElementById("fat").value);
+    Math.round(protein);
+    Math.round(carbohydrate);
+    Math.round(fat);
+    let proteinPlusCarbohydrate = protein + carbohydrate;
+    let totalMacros = protein + carbohydrate + fat;
+    console.log("Total is " + totalMacros);
+
+    switch(macro){
+        case "protein":
+            if (protein > 90) {
+                alert("No individual macro can be greater than 90 percent.");
+                document.getElementById("protein").focus();
+            } 
+            break;
+        case "carbohydrate":
+            if (carbohydrate > 90) {
+                alert("No individual macro can be greater than 90 percent.");
+                document.getElementById("carbohydrate").focus();
+            } 
+            break;
+        case "fat":
+            if (fat > 90) {
+                alert("No individual macro can be greater than 90 percent.");
+                document.getElementById("fat").focus();
+            } 
+            break;
+
+    }
+
+
+    if ( totalMacros !== 100){
+        alert("The composition of macros must equal 100 percent");
+        if (proteinPlusCarbohydrate > 100){
+            fat = (100 - protein) / 2;
+            carbohydrate = fat;
+            //document.getElementById("carbohydrate").innerText = carbohydrate;
+            //document.getElementById("fat").innerText = fat;
+            //document.getElementById("carbohydrate").focus();
+        } else {
+            fat = 100 - proteinPlusCarbohydrate;
+            document.getElementById("fat").innerText = fat;
+            document.getElementById("fat").focus();
+        }
+    }
 
 }
