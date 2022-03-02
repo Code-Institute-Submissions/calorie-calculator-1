@@ -194,26 +194,29 @@ function validateMacros(macro){
     Math.round(protein);
     Math.round(carbohydrate);
     Math.round(fat);
-    let proteinPlusCarbohydrate = protein + carbohydrate;
     let totalMacros = protein + carbohydrate + fat;
-    console.log("Total is " + totalMacros);
+
+    if ( totalMacros !== 100){
+        alert("The composition of macros is " + totalMacros + "% and it should be 100 percent");
+        document.getElementById("carbohydrate").focus();
+    }
 
     switch(macro){
         case "protein":
             if (protein > 90) {
-                alert("No individual macro can be greater than 90 percent.");
+                alert("Protein is " + protein + "% and no individual macronutrient should be greater than 90 percent.");
                 document.getElementById("protein").focus();
             } 
             break;
         case "carbohydrate":
             if (carbohydrate > 90) {
-                alert("No individual macro can be greater than 90 percent.");
+                alert("Carbohydrate is " + carbohydrate + "% and no individual macronutrient should be greater than 90 percent.");
                 document.getElementById("carbohydrate").focus();
             } 
             break;
         case "fat":
             if (fat > 90) {
-                alert("No individual macro can be greater than 90 percent.");
+                alert("Fat is " + fat + "% and no individual macronutrient should be greater than 90 percent.");
                 document.getElementById("fat").focus();
             } 
             break;
@@ -221,19 +224,5 @@ function validateMacros(macro){
     }
 
 
-    if ( totalMacros !== 100){
-        alert("The composition of macros must equal 100 percent");
-        if (proteinPlusCarbohydrate > 100){
-            fat = (100 - protein) / 2;
-            carbohydrate = fat;
-            document.getElementById("carbohydrate").innerText = carbohydrate;
-            document.getElementById("fat").innerText = fat;
-            document.getElementById("carbohydrate").focus();
-        } else {
-            fat = 100 - proteinPlusCarbohydrate;
-            document.getElementById("fat").innerText = fat;
-            document.getElementById("fat").focus();
-        }
-    }
-
+    
 }
