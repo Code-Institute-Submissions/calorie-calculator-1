@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function(){
     )
 
     for (let macro of macros){
-        macro.addEventListener("click", function(){
+        macro.addEventListener("change", function(){
             console.log("Changed on " + this.id);
             calculateMacros(this.id);
         })
@@ -24,20 +24,16 @@ document.addEventListener("DOMContentLoaded", function(){
 )
 
 function calculateMaintenance(){
-    console.log("Calculate Maintenance");
     let necessary = checkMeasurements();
     if (necessary){
         bodyfat = document.getElementById("bodyfat").value; 
-        console.log("Bodyfat: " + bodyfat);
         if (bodyfat > 0){
             katchMcCardle();
-            console.log("Katch");
         } else {
             harrisBenedict();
-            console.log("Harris");
         } 
+        calculateTarget(); 
     }
-    calculateTarget(); 
 }
 
 function calculateTarget(){
@@ -47,10 +43,8 @@ function calculateTarget(){
         let target = document.getElementById("target");
         let warning = document.getElementById("warning");
         warning.innerText = "";
-        console.log("TDEE: " + tdee);
         if (tdee !== "TBD"){
             aim = document.getElementById("aim").value;
-            console.log("aim: " + aim);
             switch(aim){
                 case "aggressive":
                     target.innerText = Math.round(tdee * 0.8);
@@ -114,7 +108,6 @@ function checkMeasurements(){
         return false;
     }
     if ( (bodyfat !== 0) && (bodyfat > 75 || bodyfat < 5 ) ) {
-        console.log("Bodyfat is " + bodyfat);
         alert("Either leave bodyfat as zero or specify a value between 5% and 75%.");
         document.getElementById("bodyfat").focus();
         return false;
@@ -179,8 +172,6 @@ function calculateGramsAndCals(){
     Math.round(protein);
     Math.round(carbohydrate);
     Math.round(fat);
-
-    console.log("Target is " + target + " and protein is " + protein);
 
     let proteinCalories = Math.round((target * protein) / 100);
     document.getElementById("proteinCalories").innerText = proteinCalories;
