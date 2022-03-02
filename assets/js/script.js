@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function(){
-    console.log("Before assignments");
     let maintenance = document.getElementById("maintenance");
     let aim = document.getElementById("aim");
     let macros = document.getElementsByClassName("macroNutrient");
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
     for (let macro of macros){
         macro.addEventListener("change", function(){
-            console.log("Changed on " + this.id);
             calculateMacros(this.id);
         })
     }
@@ -198,6 +196,7 @@ function validateMacros(macro){
     if ( totalMacros !== 100){
         alert("The composition of macros is " + totalMacros + "% and it should be 100 percent");
         document.getElementById("carbohydrate").focus();
+        return;
     }
 
     switch(macro){
@@ -221,7 +220,5 @@ function validateMacros(macro){
             break;
 
     }
-
-
     
 }
