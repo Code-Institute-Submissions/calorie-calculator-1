@@ -62,7 +62,7 @@ function calculateTarget(){
                     break;
                 case "rapid":
                     target.innerText = Math.round(tdee * 1.2);
-                    warning.innerText ="Aggressive weight gain targets should not be pursued for a long period.";
+                    warning.innerText ="Rapid weight gain targets should not be pursued for a long period.";
                     warning.style.color = "#FF0000";
                     break;
                 default:
@@ -80,7 +80,6 @@ function calculateTarget(){
 }
 
 function calculateMacros(macro){
-    console.log("MAcro passed is " + macro);
     validateMacros(macro);
 
     calculateGramsAndCals();
