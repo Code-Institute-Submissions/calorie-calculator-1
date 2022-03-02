@@ -226,9 +226,9 @@ function validateMacros(macro){
         if (proteinPlusCarbohydrate > 100){
             fat = (100 - protein) / 2;
             carbohydrate = fat;
-            //document.getElementById("carbohydrate").innerText = carbohydrate;
-            //document.getElementById("fat").innerText = fat;
-            //document.getElementById("carbohydrate").focus();
+            document.getElementById("carbohydrate").innerText = carbohydrate;
+            document.getElementById("fat").innerText = fat;
+            document.getElementById("carbohydrate").focus();
         } else {
             fat = 100 - proteinPlusCarbohydrate;
             document.getElementById("fat").innerText = fat;
