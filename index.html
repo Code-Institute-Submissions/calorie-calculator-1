@@ -14,12 +14,18 @@
     <title>Macro Calculator</title>
 </head>
 <body>
+    <!-- This page allows a user to specify certain details about themselves and get an estimate of
+    their daily caloric needs, subsequently, they can get an estimate of required calories to 
+    achieve a weight loss/gain goal-->
     <div>
         <header>
             <h1>Macro Calculator</h1>
         </header>
     </div>
     <div class="child">
+        <!-- In this first section, which is on the left side of the screen on larger devices
+        the user is asked to enter there details/measurements so that a Calorie Amount
+        to maintain their current weight i.e. not gain or lose weight, is calculated -->
         <section id="measurements" aria-label="Area to enter measurements">
             <h2>Enter Your Details</h2>
             <div class="goals-and-measurements">
@@ -40,7 +46,9 @@
                     <option value="female">Female</option>
                     <option value="male" >Male</option>
                 </select>
-            </div>    
+            </div>  
+            <!-- Depending on whether bodyfat is specified, one of two possible calorie calculators
+            will be called in the Javascript-->  
             <div class="goals-and-measurements">
                 <label for="bodyfat">Bodyfat percentage (if known)</label>
                 <input id = "bodyfat" name="bodyfat" type="number" value="0" max="75" required>
@@ -62,6 +70,10 @@
         </section>
       </div>
       <div class="child">
+        <!-- In this section, which will appear on the right side of the screen on larger devices
+        the user is asked to enter their aim i.e. do they want to lose, maintain or gain weight. 
+        They can also specify the way they wish to apportion their allotted calories between the
+        three macronutrients-->
         <section id="goals" aria-label="Area to enter goals">
             <h2>Goals and Target</h2>
             <div class="goals-and-measurements">

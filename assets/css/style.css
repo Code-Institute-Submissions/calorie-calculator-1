@@ -21,6 +21,8 @@ select {
 
 }
 
+/* On larger screens, there are two panels alongside one another, in the left a user can specify 
+their current measurements and in the right panel their goals*/
 .child {
     float: left; 
     width: 42%; 
