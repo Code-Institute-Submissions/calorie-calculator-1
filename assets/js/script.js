@@ -62,7 +62,9 @@ function calculateMaintenance(){
 
 /* 
 This function calculates the user's Target Maintenance Calories by taking their goal i.e. lose/maintain/gain
-weight and applying an appropriate multiplier to their Current Maintenance Calories
+weight and applying an appropriate multiplier to their Current Maintenance Calories. If an aggresive
+weight loss target or a rapid weight gain target has been specified then a warning will be displayed
+that such a goal should not be pursued in the long term
 */
 function calculateTarget(){
     // Before applying the multiplier, a function which ensures the necessary measurements to 
@@ -83,6 +85,7 @@ function calculateTarget(){
             switch(aim){
                 case "aggressive":
                     target.innerText = Math.round(tdee * 0.8);
+                    // sets the warning as this is an 'extreme' goal
                     warning.innerText = "Aggressive weight loss targets should not be pursued for a long period.";
                     warning.style.color = "#FF0000";
                     break;
@@ -97,6 +100,7 @@ function calculateTarget(){
                     break;
                 case "rapid":
                     target.innerText = Math.round(tdee * 1.2);
+                    // sets the warning as this is an 'extreme' goal
                     warning.innerText ="Rapid weight gain targets should not be pursued for a long period.";
                     warning.style.color = "#FF0000";
                     break;
