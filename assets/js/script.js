@@ -264,7 +264,8 @@ function calculateGramsAndCals(){
 /*
 This function validates that the user has specified a macronutrient composition that is 100% between
 the three macronutrients. It also checks that no one macronutrient is over 90% as this would not be 
-healthy
+healthy. One of three macronutrients can be changed on any occasion and the relevant macronutrient is
+passed to this function
 */
 function validateMacros(macro){
     let protein = parseInt(document.getElementById("protein").value);
@@ -281,6 +282,8 @@ function validateMacros(macro){
         return;
     }
 
+    // depending on which macronutrient has just been changed, check to see it has not been specified
+    // to be more than 90% and if this is the case issue a warning and return the user to that field
     switch(macro){
         case "protein":
             if (protein > 90) {
