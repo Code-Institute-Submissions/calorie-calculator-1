@@ -52,7 +52,6 @@ input{
 button {
     border-radius:25px;
     margin: auto;
-    float: center;
     text-align:center;
     font-size:100%;
     background-color: #3a3a3a;
@@ -66,7 +65,7 @@ button:hover {
 }
 
 .goals-and-measurements select {
-    float: center;
+    float: right;
 }
 
 input::-webkit-inner-spin-button {
@@ -89,6 +88,10 @@ label {
     margin-top: 1%;
     border-radius: 3px 3px 3px;
     border: 1px solid #445361;
+}
+
+.macroHeading {
+    font-weight: bold;
 }
 
 #current-cals, #target-cals {
@@ -139,7 +142,6 @@ footer {
     }
 
     footer {
-        clear: top;
         position: relative;
     }
     
