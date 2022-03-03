@@ -16,23 +16,26 @@ document.addEventListener("DOMContentLoaded", function(){
     maintenance.addEventListener("click", function(){
         calculateMaintenance();
     }
-    )
+    );
 
     // Once a user specifies their goal, a Target Calories amount is calculated.
     aim.addEventListener("change", function(){
         calculateTarget();
     }
-    )
+    );
 
-    // If any of the Macronutrient amounts are changed, a routine to validate and 
-    // recalculate the alloted grams and calories is called 
+    // If any of the three Macronutrient amounts (which can be protein, carbohydrate and fat)
+    //are changed, a routine to, first, validate and, then, recalculate the alloted grams and 
+    // calories is called. Jshint mentioned that calling a function from within a loop could
+    // potentially be confusing but as there are three possible macronutrients that can be changed
+    // using a loop was considered more desirable than duplicating code 
     for (let macro of macros){
         macro.addEventListener("change", function(){
             calculateMacros(this.id);
-        })
+        });
     }
 }
-)
+);
 
 /* 
 This function calculates the users current maintenace calories by calling one of two formulas, 
@@ -48,7 +51,7 @@ function calculateMaintenance(){
     let necessary = checkMeasurements();
     if (necessary){
         // depend on whether bodyfat has been specified, the appropriate formula is used 
-        bodyfat = document.getElementById("bodyfat").value; 
+        let bodyfat = document.getElementById("bodyfat").value; 
         if (bodyfat > 0){
             katchMcCardle();
         } else {
@@ -81,7 +84,7 @@ function calculateTarget(){
         if (tdee !== "TBD"){
             //If the Current Maintenance Calories have been calculated, determine the aim of the
             // user and apply the appropriate multiplier
-            aim = document.getElementById("aim").value;
+            let aim = document.getElementById("aim").value;
             switch(aim){
                 case "aggressive":
                     target.innerText = Math.round(tdee * 0.8);
@@ -105,7 +108,7 @@ function calculateTarget(){
                     warning.style.color = "#FF0000";
                     break;
                 default:
-                    bmr = 0;
+                    tdee = 0;
                     break;            
             } 
             target.style.color = " #daa520";
@@ -183,7 +186,7 @@ function harrisBenedict(){
     if (sex === "male"){
         bmr += 5;
     } else {
-        bmr -= 161
+        bmr -= 161;
     }
     maintenanceMultiplier(bmr);
 }
