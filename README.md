@@ -15,13 +15,20 @@ The user is prompted to enter weight, height, age, sex, bodyfat percentage and a
 
 If the user has not entered a mandatory field (weight, height, age, sex) they will be alerted on clicking the button. The user will also be alerted if an input is outside a range for which the calculator works e.g. an age greater than 120 years is entered. Bodyfat percentage is an optional field but if it is entered there is validation that it is not outside the 5% to 75% range. Activity level is mandatory and chosen from a dropdown menu, the default is 'Sedentary'.
 
-One of two calculations is chosen to derive the Current Maintenance Calories and which one is dependant on whether bodyfat was specified. If bodyfat was specified then Katch McCardle formula (https://en.wikipedia.org/wiki/Basal_metabolic_rate) is used otherwise the Harris Benedict formula is used (https://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation).
+One of two calculations is chosen to derive the Current Maintenance Calories and which one is dependant on whether bodyfat was specified. If bodyfat was specified then Katch McCardle formula (https://en.wikipedia.org/wiki/Basal_metabolic_rate) is used otherwise the Harris Benedict formula is used (https://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation). These formulas give a Basal Metabolic Rate, essentially the amount of calories your body utilises just to keep you alive, a multiplier is then applied to get the Total Daily Energy Expenditure (TDEE) and it is TDEE which is the Current Maintenance Calories.
 
 ### Enter Weight Loss or Gain Target
 <img width="428" alt="goalsandtargets" src="https://user-images.githubusercontent.com/70945839/156764823-d5c00080-8c2d-45ea-b3ea-002e8b4fdd3a.png">
 The user is invited to enter a weight goal and a target calorie amount will be calculated. 
 
-The weight goal is from a dropdown and the options include "Aggressive Weight Loss", "Moderate Weight Loss", "Maintain Current Weight", "Modest Weight Gain" and "Rapid Weight Gain". The default is "Maintain Current Weight" and if either of the two extreme options are chosen then along with the target calorie amount, a warning will be dispayed saying that it should not be pursued for a long period. 
+The weight goal is from a dropdown and the options include "Aggressive Weight Loss", "Moderate Weight Loss", "Maintain Current Weight" (the default), "Modest Weight Gain" and "Rapid Weight Gain". If either of the two extreme options are chosen then along with the target calorie amount, a warning will be dispayed saying that it should not be pursued for a long period.
+
+Essentially, a multiplier is applied based on the goal, and, initially, as the default is to "Maintain Current Weight", a multiplier of '1' is applied as soon as the button to Calculate Current Maintenance Calories is clicked, so once Current Maintenance Calories are displayed, an identical amount will be displayed in Target Calorie Amount. The target can then be changed as many times as the user wishes. If the user attempts to caulculate a target calorie amount before they have calculated their maintenance calories they are advised that this is a pre-requisite.
+
+### Calculate Macronutrient Consumption
+<img width="436" alt="macro" src="https://user-images.githubusercontent.com/70945839/156766949-f4af44d9-b7d9-447c-bf12-1c5d3a21c8da.png">
+
+
 
 ### Features Left to Implement
 
