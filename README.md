@@ -6,7 +6,7 @@ The application allows a user to enter figure out their required calorie consump
 
 ## Features 
 
-There are three main features to the application, the first allows calculation current maintenance calories, the second accepts a goal i.e. to lose or gain weight and calulcate a target calorie allowance and, finally, a gram per macronutrient is calculated based on a desired percentage breakdown between macronutrients.    
+There are three main features to the application, the first allows calculation of current maintenance calories, the second accepts a goal i.e. to lose or gain weight and calulcate a target calorie allowance and, finally, a gram per macronutrient is calculated based on a desired percentage breakdown between macronutrients.    
 
 ### Calculate Maintenance Calories
 
