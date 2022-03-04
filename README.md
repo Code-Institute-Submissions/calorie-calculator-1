@@ -52,7 +52,7 @@ When the screen width goes below 950px, the Target Goals section moves from the 
 
 The application works on an iPhone but it does not look as well as it might, some additional time would ideally be spent in addressing this.
 
-The application has some issues on Firefox in that the area where macronutrient percentages are deisplayed are automatically displayed with up and down arrows beside them obscuring the fields, some additional time would ideally be spent addressing this. 
+The application has some issues on Firefox in that the area where macronutrient percentages are displayed are automatically displayed with up and down arrows beside them obscuring the fields, some additional time would ideally be spent addressing this. 
 
 One area that was not addressed is to optimise the display based on the display scale of the device. The programming occured on a laptop where the display was set to 150% and it fits best there. When it is changed to 100%, the application still looks reasonable and functions but it would be optimal if the font size automatically adjusted to make better use of the relatively larger screen. Some prelimiary investigation of this indicated that it is possible with some dynamic media queries in the javascript code interacting with the CSS.  
 
