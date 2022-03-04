@@ -2,7 +2,7 @@
 
 The application allows a user to enter their measurements (weight, height, age and optionally bodyfat) to then have their maintenance calories calculated. They can then specify a goal in terms of weight loss or gain and it will cauclate the calories they should aim for. Finally, they can specify how they wish to distribute these calories between the three macronutrients and it will tell them how many grams of each they are allowed. 
 
-![Home Scren]("https://github.com/SDDNG/calorie-calculator/tree/main/assets/images/homescreen.png)
+![Home Scren]("https://github.com/SDDNG/calorie-calculator/main/assets/images/homescreen.png)
 
 ## Features 
 
