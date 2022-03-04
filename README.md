@@ -27,7 +27,14 @@ Essentially, a multiplier is applied based on the goal, and, initially, as the d
 
 ### Calculate Macronutrient Consumption
 <img width="436" alt="macro" src="https://user-images.githubusercontent.com/70945839/156766949-f4af44d9-b7d9-447c-bf12-1c5d3a21c8da.png">
+The user can then specify they wish to allocate their calories between the three macronutrients, protein, carbohydrate and fat, percentages are used and the default is 30%, 40% and 30% respectively. Once the user chooses the percentages, the amount of grams of each macronutrient and the calorie allocation for that macronutrient is displayed.
 
+The calculation is quite straight forward a gram of protein and carbohydrate contains four calories while a gram of fat contains nine calories.
+
+If the user allocates more than 90% to one macronutrient they are warned they should not do this and if they do not account for 100% of the allocation they are also warned.
+
+### Footer
+<img width="958" alt="footer" src="https://user-images.githubusercontent.com/70945839/156767776-bbe2faf8-f720-421b-a113-7993c580f913.png">
 
 
 ### Features Left to Implement
