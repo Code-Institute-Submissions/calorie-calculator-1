@@ -1,66 +1,27 @@
 # Calorie Calculator
 
-The application allows a user to enter their measurements (weight, height, age and optionally bodyfat) to then have their maintenance calories calculated. They can then specify a goal in terms of weight loss or gain and it will cauclate the calories they should aim for. Finally, they can specify how they wish to distribute these calories between the three macronutrients and it will tell them how many grams of each they are allowed. 
+The application allows a user to enter figure out their required calorie consumption to achieve a weight loss or weight gain goal and and it will also tell them how many grams of each macronutrient they are allowed based on their desired percentage breakdown. 
 
-![Home Scren]("https://github.com/SDDNG/calorie-calculator/main/assets/images/homescreen.png)
+<img width="944" alt="homescreen" src="https://user-images.githubusercontent.com/70945839/156760752-21279006-ac16-4917-be51-fceb73152452.png">
 
 ## Features 
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so. You will need to explain what value each of the features provides for the user, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+There are three main features to the application, the first allows calculation current maintenance calories, the second accepts a goal i.e. to lose or gain weight and calulcate a target calorie allowance and, finally, a gram per macronutrient is calculated based on a desired percentage breakdown between macronutrients.    
 
-### Existing Features
+### Calculate Maintenance Calories
 
-- __Navigation Bar__
+<img width="448" alt="leftsidescreen" src="https://user-images.githubusercontent.com/70945839/156762226-b7ba56ac-08f8-4466-9de7-8923f00996a6.png">
+The user is prompted to enter weight, height, age, sex, bodyfat percentage and activity level.  The user can then click the "Calculate Maintenance Calories" button and a recommended calorie consumption amount is calculated. 
 
-  - Featured on all three pages, the full responsive navigation bar includes links to the Logo, Home page, Gallery and Sign Up page and is identical in each page to allow for easy navigation.
-  - This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
+If the user has not entered a mandatory field (weight, height, age, sex) they will be alerted on clicking the button. The user will also be alerted if an input is outside a range for which the calculator works e.g. an age greater than 120 years is entered. Bodyfat percentage is an optional field but if it is entered there is validation that it is not outside the 5% to 75% range. Activity level is mandatory and chosen from a dropdown menu, the default is 'Sedentary'.
 
-![Nav Bar](https://github.com/lucyrush/readme-template/blob/master/media/love_running_nav.png)
+One of two calculations is chosen to derive the Current Maintenance Calories and which one is dependant on whether bodyfat was specified. If bodyfat was specified then Katch McCardle formula (https://en.wikipedia.org/wiki/Basal_metabolic_rate) is used otherwise the Harris Benedict formula is used (https://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation).
 
-- __The landing page image__
+### Enter Weight Loss or Gain Target
+<img width="428" alt="goalsandtargets" src="https://user-images.githubusercontent.com/70945839/156764823-d5c00080-8c2d-45ea-b3ea-002e8b4fdd3a.png">
+The user is invited to enter a weight goal and a target calorie amount will be calculated. 
 
-  - The landing includes a photograph with text overlay to allow the user to see exactly which location this site would be applicable to. 
-  - This section introduces the user to Love Running with an eye catching animation to grab their attention
-
-![Landing Page](https://github.com/lucyrush/readme-template/blob/master/media/love_running_landing.png)
-
-- __Club Ethos Section__
-
-  - The club ethos section will allow the user to see the benefits of joining the Love Running meetups, as well as the benefits of running overall. 
-  - This user will see the value of signing up for the Love Running meetups. This should encourage the user to consider running as their form of exercise. 
-
-![Club Ethos](https://github.com/lucyrush/readme-template/blob/master/media/love_running_ethos.png)
-
-- __Meetup Times section__
-
-  - This section will allow the user to see exactly when the meetups will happen, where they will be located and how long the run will be in kilometers. 
-  - This section will be updated as these times change to keep the user up to date. 
-
-![Meetup Times](https://github.com/lucyrush/readme-template/blob/master/media/love_running_times.png)
-
-- __The Footer__ 
-
-  - The footer section includes links to the relevant social media sites for Love Running. The links will open to a new tab to allow easy navigation for the user. 
-  - The footer is valuable to the user as it encourages them to keep connected via social media
-
-![Footer](https://github.com/lucyrush/readme-template/blob/master/media/love_running_footer.png)
-
-- __Gallery__
-
-  - The gallery will provide the user with supporting images to see what the meet ups look like. 
-  - This section is valuable to the user as they will be able to easily identify the types of events the organisation puts together. 
-
-![Gallery](https://github.com/lucyrush/readme-template/blob/master/media/love_running_gallery.png)
-
-- __The Sign Up Page__
-
-  - This page will allow the user to get signed up to Love Running to start their running journey with the community. The user will be able specify if they would like to take part in road, trail or both types of running. The user will be asked to submit their full name and email address. 
-
-![Sign Up](https://github.com/lucyrush/readme-template/blob/master/media/love_running_signup.png)
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+The weight goal is from a dropdown and the options include "Aggressive Weight Loss", "Moderate Weight Loss", "Maintain Current Weight", "Modest Weight Gain" and "Rapid Weight Gain". The default is "Maintain Current Weight" and if either of the two extreme options are chosen then along with the target calorie amount, a warning will be dispayed saying that it should not be pursued for a long period. 
 
 ### Features Left to Implement
 
