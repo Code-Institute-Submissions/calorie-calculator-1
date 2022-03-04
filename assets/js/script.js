@@ -134,7 +134,11 @@ function calculateMacros(macro){
     // over 90% (as this would be inadvisable from a health perspective)  
     validateMacros(macro);
     // Based on the specified percentages, the grams and calories per macronutrient are calculated.
-    calculateGramsAndCals();
+    // Only do caluclation if maintenance calories have already been calculated
+    let tdee = document.getElementById("tdee").innerText;
+    if (tdee !== "TBD"){
+        calculateGramsAndCals();
+    }
 }
 
 /* 
